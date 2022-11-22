@@ -1,4 +1,32 @@
 <html>
   <head>General DBA tips</head>
-  <body>General DBA Tips</body>
+  <body>
+    <h1>General DBA Tips</h1>
+    <ol>
+      <li>
+      download VcXsrv.zip from https://www.scrc.umanitoba.ca/doc/tutorial/T19_3a_xmingputty.htm  
+      </li> 
+      <li>
+    extract to C:\oracle\VcXsrv 
+    Right click on Start VcXsrv_PuTTy.cmd 
+    
+    select Run as Administrator
+    right click on Xming icon in Windows tray (right bottom of screen) and select New Putty session
+    
+    
+    
+    select the saved sessions or enter new session Host Name or IP address
+    connect as oracle (so you don't have to relay the display after you sudo su - oracle)
+    
+    
+    
+    continue if not login as oracle user
+     xauth list
+    sudo -i -u oracle
+    xauth add (copy the output from step 11)
+      </li>
+
+    </ol>
+
+  </body>
 </html>
