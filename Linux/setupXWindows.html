@@ -1,0 +1,43 @@
+<html>
+  <head><title>Setup xWindows</title></head>
+  <body>
+    <h1>Setup xWindows when install Oracle on linux or create database using dbca GUI</h1>
+    <p>When install Oracle or create database using dbca GUI on linux, I use VcXsrv (thanks for the free tool),steps are:</p>
+    <ol>
+		<li>
+			download VcXsrv.zip from https://www.scrc.umanitoba.ca/doc/tutorial/T19_3a_xmingputty.htm  
+		</li> 
+		<li>
+			extract to C:\oracle\VcXsrv 
+		</li>
+		<li>
+			Right click on Start VcXsrv_PuTTy.cmd 
+		</li>
+		<li>
+			select Run as Administrator
+		</li>
+		<li>
+		    right click on Xming icon in Windows tray (right bottom of screen) and select New Putty session
+		</li>
+		<li>
+			select the saved sessions or enter new session Host Name or IP address
+		</li>
+		<li>
+			connect as oracle (so you don't have to relay the display after you sudo su - oracle)
+		</li>
+		<li>
+			Only continue if not login as oracle user
+		</li>
+		<li>
+		    xauth list (copy the output, be used in later step)
+		</li>
+		<li>
+			sudo -i -u oracle
+		</li>
+		<li>
+			xauth add (paste the output from step above mentioned)
+		</li>
+    </ol>
+
+  </body>
+</html>
